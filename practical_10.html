@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 25px;
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #bbb;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2471a3;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            outline: 2px solid #d6eaf8;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin-top: 20px;
+            background: #2471a3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #154360;
+        }
+
+        button:active {
+            background: #1e8449;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>College Admission Form</h2>
+
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number" required>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Choose a course</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Tech</option>
+                <option>MCA</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      rows="3" placeholder="Enter your address"></textarea>
+
+            <label>
+                <input type="checkbox" required>
+                I confirm that the information is correct.
+            </label>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>

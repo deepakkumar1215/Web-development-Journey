@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration</title>
+
+    <style>
+        /* CSS ID */
+        #heading {
+            color: blue;
+            text-align: center;
+        }
+
+        /* CSS Classes */
+        .box {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            margin: 20px auto;
+            border: 2px solid rgb(104, 126, 16);
+            background-color: rgb(27, 181, 178);
+        }
+
+        /* Outline */
+        .outline-box {
+            outline: 3px dashed rgb(59, 65, 14);
+            outline-offset: 5px;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            list-style-type: upper-roman;
+        }
+
+        /* Cursor */
+        button {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .help {
+            cursor: help;
+        }
+
+        /* Scrollbar demonstration */
+        .scroll-box {
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+            border: 2px solid rgb(77, 151, 77);
+            padding: 10px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">CSS Properties Demonstration</h1>
+
+    <h2>1. CSS Classes and Dimensions</h2>
+    <div class="box">
+        This box demonstrates width, height, padding, margin and border.
+    </div>
+
+    <h2>2. CSS Outline</h2>
+    <div class="box outline-box">
+        This box has a red dashed outline.
+    </div>
+
+    <h2>3. CSS Lists</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+    </ol>
+
+    <h2>4. CSS Cursors</h2>
+    <button>Pointer Cursor</button>
+    <p class="help">Move your mouse here to see the help cursor.</p>
+
+    <h2>5. CSS Scrollbar</h2>
+    <div class="scroll-box">
+        This is a scrollable box. Add more text to see the scrollbar.
+        <p>CSS is used to style web pages.</p>
+        <p>HTML creates the structure of a web page.</p>
+        <p>JavaScript adds interactivity to web pages.</p>
+        <p>Scroll down to read more content.</p>
+        <p>This is the last line of the scrollable content.</p>
+    </div>
+
+</body>
+</html>
