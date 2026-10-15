@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms and Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 18px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #00000015;
+            overflow: hidden;
+        }
+
+        .card h2 {
+            color: #173b70;
+            margin-bottom: 12px;
+        }
+
+        /* CSS 2D Transform */
+        .box-2d {
+            width: 100px;
+            height: 100px;
+            background: coral;
+            margin: 25px auto;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.5s;
+        }
+
+        .box-2d:hover {
+            transform: rotate(25deg) scale(1.15);
+        }
+
+        /* CSS 3D Transform */
+        .scene {
+            perspective: 500px;
+            height: 160px;
+            display: grid;
+            place-items: center;
+        }
+
+        .box-3d {
+            width: 100px;
+            height: 100px;
+            background: #7456d8;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: bold;
+            transition: transform 0.8s;
+        }
+
+        .box-3d:hover {
+            transform: rotateY(45deg) rotateX(25deg);
+        }
+
+        /* CSS Animation */
+        .ball {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #08a88a;
+            margin: 30px auto;
+            animation: bounce 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-45px);
+            }
+        }
+
+        /* Responsive Layout */
+        .responsive-box {
+            background: #dbeafe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Transform, Animation & Responsive Design</h1>
+        <p>Web Designing Practical</p>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section class="card">
+                <h2>1. CSS 2D Transform</h2>
+                <p>Hover over the box to rotate and scale it.</p>
+                <div class="box-2d">2D Box</div>
+            </section>
+
+            <section class="card">
+                <h2>2. CSS 3D Transform</h2>
+                <p>Hover over the box to see the 3D effect.</p>
+                <div class="scene">
+                    <div class="box-3d">3D Box</div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>3. CSS Animation</h2>
+                <p>The ball moves automatically.</p>
+                <div class="ball"></div>
+            </section>
+
+            <section class="card">
+                <h2>4. Responsive Layout</h2>
+                <p>Resize your browser to see the layout change.</p>
+                <div class="responsive-box">
+                    This layout adjusts to mobile and desktop screens.
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Created for CSS Practical</p>
+    </footer>
+
+</body>
+</html>
